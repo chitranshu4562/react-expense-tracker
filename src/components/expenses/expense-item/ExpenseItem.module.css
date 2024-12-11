@@ -1,0 +1,10 @@
+.elementColor {
+    color: #121212;
+}
+
+.cardContainer {
+    background-color: #00006e;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    margin: 0.5rem 0;
+}

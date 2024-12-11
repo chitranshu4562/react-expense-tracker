@@ -1,0 +1,9 @@
+.cardContainer {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.cardContainerTitle {
+    color: #660066;
+}
