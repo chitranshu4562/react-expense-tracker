@@ -1,19 +1,13 @@
-// with callback we can provide flexibility for result of sum function
+const data = [
+    {amount: 10, name: 'fghj'},
+    {amount: 20, name: 'fghj'},
+    {amount: 30, name: 'fghj'},
+    {amount: 40, name: 'fghj'},
+]
 
-const display = async () => {
-    const myPromise = new Promise((resolve, reject) => {
-        const flag = true;
-        setTimeout(() => {
-            if (flag) {
-                resolve('Success response');
-            } else {
-                reject('Error response');
-            }
-        }, 2000)
-    });
+const result = data.reduce((sum, item) => {
+    return sum + item.amount;
+}, 0);
 
-    const result = await myPromise;
-    console.log(result);
-}
-
-display();
+console.log(result);
+console.log(data);

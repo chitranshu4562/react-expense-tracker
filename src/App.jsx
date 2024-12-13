@@ -10,6 +10,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import OutlinedClickableIcon from "./components/outlined-clickable-icon/OutlinedClickableIcon.jsx";
 import {FilterContext} from "./contexts/FilterContext.jsx";
 import {EXPENSE_CATEGORY} from "./constants.js";
+import ExpenseAnalytics from "./components/expense-analytics/ExpenseAnalytics.jsx";
 
 const theme = createTheme({
     components: {
@@ -87,14 +88,21 @@ function App() {
                             </Typography>
                         </div>
                         <div className="d-flex align-items-center">
-                            <Button variant="contained" onClick={handleShowForm}>+ Add Expense</Button>
+                            <Button variant="contained" onClick={handleShowForm}>
+                                <Typography>+ Add Expense</Typography>
+                            </Button>
                         </div>
                     </div>
                     <BasicModal open={showForm} onClose={handleHideForm}>
                         <ExpenseForm onSubmit={handleHideForm}>
-                            <Button variant="outlined" onClick={handleHideForm}>Cancel</Button>
+                            <Button
+                                variant="contained" sx={{
+                                backgroundColor: '#660033'
+                            }}
+                                onClick={handleHideForm}>Cancel</Button>
                         </ExpenseForm>
                     </BasicModal>
+                    <ExpenseAnalytics/>
                     <Expenses/>
                 </div>
             </ThemeProvider>

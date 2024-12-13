@@ -1,0 +1,10 @@
+.expenseAnalyticsContainer {
+    background-color: #000033;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.verticalBarContainer {
+    background-color: #1a1a00;
+    border-radius: 12px;
+}
